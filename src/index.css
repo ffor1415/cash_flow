@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 150 10% 97%;
+    --foreground: 210 30% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 30% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 30% 12%;
+
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 160 20% 93%;
+    --secondary-foreground: 160 50% 20%;
+
+    --muted: 150 10% 94%;
+    --muted-foreground: 210 10% 46%;
+
+    --accent: 36 95% 55%;
+    --accent-foreground: 36 95% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 10% 90%;
+    --input: 150 10% 88%;
+    --ring: 160 84% 39%;
+
+    --radius: 0.75rem;
+
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+    --warning: 36 95% 55%;
+    --warning-foreground: 36 95% 15%;
+    --info: 210 90% 55%;
+    --info-foreground: 0 0% 100%;
+
+    --income: 160 84% 39%;
+    --expense: 0 72% 51%;
+    --borrow: 210 90% 55%;
+    --lend: 36 95% 55%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 210 30% 12%;
+    --sidebar-primary: 160 84% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 20% 93%;
+    --sidebar-accent-foreground: 160 50% 20%;
+    --sidebar-border: 150 10% 90%;
+    --sidebar-ring: 160 84% 39%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(160, 84%, 39%), hsl(170, 70%, 45%));
+    --gradient-accent: linear-gradient(135deg, hsl(36, 95%, 55%), hsl(25, 90%, 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(160, 84%, 39%), hsl(200, 80%, 50%));
+    --shadow-card: 0 1px 3px 0 hsl(150 10% 12% / 0.04), 0 1px 2px -1px hsl(150 10% 12% / 0.04);
+    --shadow-card-hover: 0 10px 25px -5px hsl(150 10% 12% / 0.08), 0 8px 10px -6px hsl(150 10% 12% / 0.04);
+  }
+
+  .dark {
+    --background: 210 30% 8%;
+    --foreground: 150 10% 95%;
+    --card: 210 25% 11%;
+    --card-foreground: 150 10% 95%;
+    --popover: 210 25% 11%;
+    --popover-foreground: 150 10% 95%;
+    --primary: 160 70% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 18%;
+    --secondary-foreground: 150 10% 85%;
+    --muted: 210 20% 15%;
+    --muted-foreground: 150 10% 60%;
+    --accent: 36 80% 50%;
+    --accent-foreground: 36 95% 90%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 20% 18%;
+    --input: 210 20% 20%;
+    --ring: 160 70% 45%;
+    --sidebar-background: 210 25% 10%;
+    --sidebar-foreground: 150 10% 95%;
+    --sidebar-primary: 160 70% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 16%;
+    --sidebar-accent-foreground: 150 10% 85%;
+    --sidebar-border: 210 20% 18%;
+    --sidebar-ring: 160 70% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-shadow duration-300;
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .stat-income {
+    color: hsl(var(--income));
+  }
+
+  .stat-expense {
+    color: hsl(var(--expense));
+  }
+
+  .stat-borrow {
+    color: hsl(var(--borrow));
+  }
+
+  .stat-lend {
+    color: hsl(var(--lend));
+  }
+}
