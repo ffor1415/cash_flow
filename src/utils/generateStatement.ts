@@ -350,5 +350,5 @@ drawInfoRow(
   // ═══════════════════════════════════════════
   // SAVE
   // ═══════════════════════════════════════════
-  doc.save(`CloudCashFlow_Statement_${fromDate}_to_${toDate}.pdf`);
+  doc.save(`CashFlow_Statement_${fromDate}_to_${toDate}.pdf`);
 }
