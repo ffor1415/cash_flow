@@ -296,7 +296,7 @@ export default function ReportsPage() {
             <TableHeader>
               <TableRow className="bg-muted/30">
                 <TableHead className="font-semibold text-xs uppercase tracking-wider w-[110px]">Date</TableHead>
-                <TableHead className="font-semibold text-xs uppercase tracking-wider">Description</TableHead>
+                <TableHead className="font-semibold text-xs uppercase tracking-wider w-[250px]">Description</TableHead>
                 <TableHead className="font-semibold text-xs uppercase tracking-wider w-[120px]">Category</TableHead>
                 <TableHead className="font-semibold text-xs uppercase tracking-wider w-[90px]">Type</TableHead>
                 <TableHead className="font-semibold text-xs uppercase tracking-wider text-right w-[110px]">Amount</TableHead>
