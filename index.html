@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- ✅ This is the critical fix: tells mobile browsers NOT to zoom out.
+         Without this, phones render the page at ~980px and shrink everything. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <title>CashFlow - Personal Finance</title>
+    <link rel="icon" type="image/x-icon" href="/cash_flow_logo_new.png"/>
+
+    <!-- PWA / mobile meta -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#2a8fa8" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
